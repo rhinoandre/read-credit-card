@@ -1,5 +1,13 @@
 import { readFileSync, writeFileSync } from 'fs';
 
+/*
+* Mathes example
+* 1 25/07 Place with anything on it 11,98
+* 1 - ignored
+* 25/07 - date
+* Place with anything on it - place
+* 11,98 - value
+*/
 const regex =
   /^(?:\d{0,2} )?(?<date>\d{2}\/\d{2}) (?<place>[^\d-]+)(?<value>.*)/gm;
 
