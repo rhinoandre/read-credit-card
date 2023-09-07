@@ -19,7 +19,7 @@ const entries = [];
 for (const match of matches) {
   const value = match.groups.value.match(/([\d\.,-]+)$/)[0];
   const place = match.groups.place + match.groups.value.replace(value, '');
-  entries.push([match.groups.date.trim(), place.trim(), value.replace('.', '').replace(',', '.')]);
+  entries.push([match.groups.date.trim(), place.trim(), `"${value.replace('.', '')}"`]);
 }
 
 // group by place
